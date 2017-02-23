@@ -3,7 +3,7 @@
 
 方法一
 
-file -> import settings -> setting.jar
+file -> import settings -> mobx.jar
 
 方法二
 
