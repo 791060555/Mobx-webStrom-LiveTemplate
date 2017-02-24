@@ -1,37 +1,141 @@
 <templateSet group="mobx">
   <template name="@observable" value="@observable&#10;$NAME$ = null;" description="observable" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_STATEMENT" value="false" />
+    </context>
   </template>
   <template name="@computed" value="@computed&#10;get $computeFn$(){&#10;    return $END$;&#10;}" description="@computed" toReformat="false" toShortenFQNames="true">
     <variable name="computeFn" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_STATEMENT" value="false" />
+    </context>
   </template>
   <template name="rnMC" value="import React from 'react-native';&#10;import {observer} from &quot;mobx-react&quot;;&#10;import styles from 'styles';&#10;&#10;const { Component, View, Text } = React;&#10;&#10;@observer&#10;class $NAME$ extends Component {&#10;  // 默认属性&#10;  static defaultProps = {};&#10;&#10;  // 属性类型&#10;  static propTypes = {};&#10;&#10;  // 构造&#10;  constructor(props) {&#10;    super(props);&#10;    // 初始状态&#10;    this.state = {};&#10;  }&#10;&#10;  // 自定义方法&#10;  handle() {&#10;    &#10;  }&#10;&#10;  // 渲染&#10;  render() {&#10;    return (&#10;      &lt;View&gt;&#10;        &lt;Text style={styles.textDefault}&gt;&#10;          $NAME$&#10;        &lt;/Text&gt;&#10;      &lt;/View&gt;&#10;    );&#10;  }&#10;&#10;}&#10;&#10;export default $NAME$;&#10;" description="new react native and mobx Component" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_STATEMENT" value="false" />
+    </context>
   </template>
-  <template name="@action" value="@action&#10;$action$(){&#10;    $END$&#10;}" description="action" toReformat="false" toShortenFQNames="true">
+  <template name="@action" value="@action&#10;$name$(){&#10;    $END$&#10;}" description="action" toReformat="true" toShortenFQNames="true">
+    <variable name="name" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_STATEMENT" value="false" />
+    </context>
+  </template>
+  <template name="@action.bound" value="@action.bound&#10;$action$(){&#10;    &#10;}" description="@action.bound" toReformat="false" toShortenFQNames="true">
     <variable name="action" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_STATEMENT" value="false" />
+    </context>
   </template>
-  <template name="@action.bound" value="@action.bound&#10;$action$(){&#10;    &#10;}" toReformat="false" toShortenFQNames="true">
-    <variable name="action" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="observable" value="observable($END$)" description="observable" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+    </context>
   </template>
-  <template name="observable" value="observable($END$)" description="observable" toReformat="false" toShortenFQNames="true" />
   <template name="autorunAsync" value="autorunAsync(() =&gt; {&#10;  $END$&#10;}, $time$);" description="autorunAsync" toReformat="false" toShortenFQNames="true">
     <variable name="time" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+    </context>
   </template>
-  <template name="autorun" value="autorun(() =&gt; {&#10;  $END$&#10;});" toReformat="false" toShortenFQNames="true" />
-  <template name="Expr" value=" mobx.expr(() =&gt; $END$)" description="expr(func) is an alias for computed(func).get()." toReformat="false" toShortenFQNames="true" />
+  <template name="autorun" value="autorun(() =&gt; {&#10;  $END$&#10;});" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+    </context>
+  </template>
+  <template name="Expr" value=" mobx.expr(() =&gt; $END$)" description="expr(func) is an alias for computed(func).get()." toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+    </context>
+  </template>
   <template name="isObservable" value="isObservable($name$)" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
   </template>
   <template name="isObservable1" value="isObservable($name$,&quot;$value$&quot;)" description="isObservable and prop" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+    </context>
   </template>
-  <template name="reaction" value="reaction(() =&gt; data, data =&gt; { sideEffect }, options?)" description="reaction(() =&gt; data, data =&gt; { sideEffect }, options?)" toReformat="false" toShortenFQNames="true" />
-  <template name="intercept" value="intercept(target, propertyName?, interceptor)" description="intercept(target, propertyName?, interceptor)" toReformat="false" toShortenFQNames="true" />
-  <template name="observe" value="observe(target, propertyName?, listener, invokeImmediately?)" description="observe(target, propertyName?, listener, invokeImmediately?)" toReformat="false" toShortenFQNames="true" />
-  <template name="spy" value="spy((event) =&gt; {&#10;    if (event.type === 'action') {&#10;        console.log(`${event.name} with args: ${event.arguments}`)&#10;    }&#10;})" description="spy(listener) 监听所有函数" toReformat="false" toShortenFQNames="true" />
-  <template name="toJS" value="mobx.toJS($END$)" description="toJS(value, supportCycles = true)" toReformat="false" toShortenFQNames="true" />
-  <template name="untracked" value="untracked" description="untracked is automatically applied by (@)action, so usually it makes more sense to use actions then untracked directly" toReformat="false" toShortenFQNames="true" />
-  <template name="when" value="when(debugName?, predicate: () =&gt; boolean, effect: () =&gt; void, scope?)" description="when(debugName?, predicate: () =&gt; boolean, effect: () =&gt; void, scope?)" toReformat="false" toShortenFQNames="true" />
+  <template name="reaction" value="reaction(() =&gt; data, data =&gt; { sideEffect }, options?)" description="reaction(() =&gt; data, data =&gt; { sideEffect }, options?)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+    </context>
+  </template>
+  <template name="intercept" value="intercept(target, propertyName?, interceptor)" description="intercept(target, propertyName?, interceptor)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+    </context>
+  </template>
+  <template name="observe" value="observe(target, propertyName?, listener, invokeImmediately?)" description="observe(target, propertyName?, listener, invokeImmediately?)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+    </context>
+  </template>
+  <template name="spy" value="spy((event) =&gt; {&#10;    if (event.type === 'action') {&#10;        console.log(`${event.name} with args: ${event.arguments}`)&#10;    }&#10;})" description="spy(listener) 监听所有函数" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+    </context>
+  </template>
+  <template name="toJS" value="mobx.toJS($END$)" description="toJS(value, supportCycles = true)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+    </context>
+  </template>
+  <template name="untracked" value="untracked" description="untracked is automatically applied by (@)action, so usually it makes more sense to use actions then untracked directly" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+    </context>
+  </template>
+  <template name="when" value="when(debugName?, predicate: () =&gt; boolean, effect: () =&gt; void, scope?)" description="when(debugName?, predicate: () =&gt; boolean, effect: () =&gt; void, scope?)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+    </context>
+  </template>
 </templateSet>
