@@ -24,9 +24,7 @@ webstorm2016.2安装路径
 
 通用方法
 
-直接输入组件 或 Api 名称的首字母, 比如想要 @observable ,只要输入 V自动提示代码里就会看到 @observable
-
-StyleSheet属性提示
+直接输入组件 或 Api 名称的首字母, 比如想要 @observable ,只要输入 @自动提示代码里就会看到 @observable
 
 首先 按下 command + J , 然后输入属性名的 首字母
 
