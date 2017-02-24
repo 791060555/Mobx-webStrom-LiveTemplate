@@ -1,4 +1,4 @@
-# Mobx-webStrom-LiveTemplate
+# Mobx-webstrom-LiveTemplate
 安装
 
 方法一
